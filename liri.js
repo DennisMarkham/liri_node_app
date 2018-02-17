@@ -45,7 +45,10 @@ if (a === "spotify-this-song")
 // The album that the song is from
 
 //NOTE YOU ARE NOT SEARCHING
-
+if (b === "")
+{
+	b = "The Sign";
+}
 spotify
   .search({ type: 'track', query: b })
   .then(function(response) {
@@ -84,6 +87,11 @@ if (a === "movie-this")
   // * Language of the movie.
   // * Plot of the movie.
   // * Actors in the movie.
+	
+	if (b === "") 
+	{
+		b = "Mr. Nobody";
+	}
 
    var movieQueryURL = "https://www.omdbapi.com/?t=" + b + "&y=&plot=short&apikey=trilogy";
 
